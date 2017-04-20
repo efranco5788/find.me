@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		890265F91EA44D32006F3A3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 890265F81EA44D32006F3A3F /* main.m */; };
 		890265FC1EA44D32006F3A3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 890265FB1EA44D32006F3A3F /* AppDelegate.m */; };
-		890265FF1EA44D32006F3A3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890265FE1EA44D32006F3A3F /* ViewController.m */; };
 		890266021EA44D32006F3A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890266001EA44D32006F3A3F /* Main.storyboard */; };
 		890266041EA44D32006F3A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 890266031EA44D32006F3A3F /* Assets.xcassets */; };
 		890266071EA44D32006F3A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890266051EA44D32006F3A3F /* LaunchScreen.storyboard */; };
 		890266121EA44D32006F3A3F /* find_meTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 890266111EA44D32006F3A3F /* find_meTests.m */; };
 		8902661D1EA44D32006F3A3F /* find_meUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8902661C1EA44D32006F3A3F /* find_meUITests.m */; };
+		8902662D1EA44E44006F3A3F /* LocationDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8902662B1EA44E44006F3A3F /* LocationDisplayViewController.m */; };
+		890266311EA45568006F3A3F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890266301EA45568006F3A3F /* LocationManager.m */; };
+		890266341EA46561006F3A3F /* CityDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 890266331EA46561006F3A3F /* CityDataObject.m */; };
+		890266371EA48526006F3A3F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890266361EA48526006F3A3F /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +42,6 @@
 		890265F81EA44D32006F3A3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		890265FA1EA44D32006F3A3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		890265FB1EA44D32006F3A3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		890265FD1EA44D32006F3A3F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		890265FE1EA44D32006F3A3F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		890266011EA44D32006F3A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		890266031EA44D32006F3A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		890266061EA44D32006F3A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,14 @@
 		890266181EA44D32006F3A3F /* find.meUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = find.meUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8902661C1EA44D32006F3A3F /* find_meUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = find_meUITests.m; sourceTree = "<group>"; };
 		8902661E1EA44D32006F3A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8902662A1EA44E44006F3A3F /* LocationDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationDisplayViewController.h; path = ../LocationDisplayViewController.h; sourceTree = "<group>"; };
+		8902662B1EA44E44006F3A3F /* LocationDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationDisplayViewController.m; path = ../LocationDisplayViewController.m; sourceTree = "<group>"; };
+		8902662F1EA45568006F3A3F /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		890266301EA45568006F3A3F /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		890266321EA46561006F3A3F /* CityDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDataObject.h; sourceTree = "<group>"; };
+		890266331EA46561006F3A3F /* CityDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDataObject.m; sourceTree = "<group>"; };
+		890266351EA48526006F3A3F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		890266361EA48526006F3A3F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +112,14 @@
 			children = (
 				890265FA1EA44D32006F3A3F /* AppDelegate.h */,
 				890265FB1EA44D32006F3A3F /* AppDelegate.m */,
-				890265FD1EA44D32006F3A3F /* ViewController.h */,
-				890265FE1EA44D32006F3A3F /* ViewController.m */,
+				890266351EA48526006F3A3F /* HomeViewController.h */,
+				890266361EA48526006F3A3F /* HomeViewController.m */,
+				8902662A1EA44E44006F3A3F /* LocationDisplayViewController.h */,
+				8902662B1EA44E44006F3A3F /* LocationDisplayViewController.m */,
+				8902662F1EA45568006F3A3F /* LocationManager.h */,
+				890266301EA45568006F3A3F /* LocationManager.m */,
+				890266321EA46561006F3A3F /* CityDataObject.h */,
+				890266331EA46561006F3A3F /* CityDataObject.m */,
 				890266001EA44D32006F3A3F /* Main.storyboard */,
 				890266031EA44D32006F3A3F /* Assets.xcassets */,
 				890266051EA44D32006F3A3F /* LaunchScreen.storyboard */,
@@ -276,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890265FF1EA44D32006F3A3F /* ViewController.m in Sources */,
+				890266311EA45568006F3A3F /* LocationManager.m in Sources */,
+				890266341EA46561006F3A3F /* CityDataObject.m in Sources */,
 				890265FC1EA44D32006F3A3F /* AppDelegate.m in Sources */,
+				8902662D1EA44E44006F3A3F /* LocationDisplayViewController.m in Sources */,
 				890265F91EA44D32006F3A3F /* main.m in Sources */,
+				890266371EA48526006F3A3F /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +534,7 @@
 				890266231EA44D32006F3A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		890266241EA44D32006F3A3F /* Build configuration list for PBXNativeTarget "find.meTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +543,7 @@
 				890266261EA44D32006F3A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		890266271EA44D32006F3A3F /* Build configuration list for PBXNativeTarget "find.meUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +552,7 @@
 				890266291EA44D32006F3A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
