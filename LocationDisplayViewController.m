@@ -28,6 +28,10 @@
     [self.lbl_state setText:self.stateString];
     [self.lbl_latitude setText:self.latString];
     [self.lbl_longitude setText:self.longString];
+    
+    self.loadingView = [[UIView alloc] init];
+    [self.loadingView setBackgroundColor:[UIColor blackColor]];
+    [self.loadingView setHidden:YES];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -65,10 +69,33 @@
     [adView setHidden:NO];
 }
 
+-(void)showLoadingView
+{
+    UIActivityIndicatorView* indicator = [[UIActivityIndicatorView alloc] init];
+    [indicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [indicator startAnimating];
+    
+    [self.loadingView setFrame:self.view.frame];
+    [indicator setFrame:CGRectMake((self.loadingView.frame.size.width / 2), (self.loadingView.frame.size.height / 2), indicator.frame.size.width, indicator.frame.size.height)];
+    [self.loadingView setAlpha:0.5];
+    [self.loadingView setHidden:NO];
+    [self.loadingView addSubview:indicator];
+    [self.view addSubview:self.loadingView];
+
+}
+
+-(void)hideLoadingView
+{
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)resetPressed:(id)sender {
+    [self showLoadingView];
+}
 @end

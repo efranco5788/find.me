@@ -19,6 +19,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbl_longitude;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_latitude;
 @property (strong, nonatomic) IBOutlet UIButton *btn_reset;
+- (IBAction)resetPressed:(id)sender;
+
 
 @property (strong, nonatomic) NSString* addressString;
 @property (strong, nonatomic) NSString* cityString;
@@ -26,9 +28,12 @@
 @property (strong, nonatomic) NSString* longString;
 @property (strong, nonatomic) NSString* latString;
 @property (strong, nonatomic) GADBannerView* adMobBannerView;
+@property (strong, nonatomic) UIView* loadingView;
 
 
 -(void) initAdView;
 -(void) showAdView:(GADBannerView*)adView;
+-(void) showLoadingView;
+-(void) hideLoadingView;
 
 @end

@@ -71,8 +71,7 @@
         destination.stateString = [[NSString alloc] initWithString:city.state];
         destination.latString = [[NSString alloc] initWithString:city.latitude];
         destination.longString = [[NSString alloc] initWithString:city.longitude];
-        
-        NSLog(@"Here %@", city.longitude);
+
     }
     
 }
