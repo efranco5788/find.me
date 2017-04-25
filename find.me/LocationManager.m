@@ -37,6 +37,7 @@
 #define MAX_ROWS @"20"
 #define DEFAULT_RADIUS @"1"
 #define DEFAULT_ROWS @"5"
+#define UNKNOWN_STATUS @"unkown"
 
 static LocationManager* sharedManager;
 
@@ -293,11 +294,27 @@ static LocationManager* sharedManager;
                 
                 NSString* currentAddress = [formattedAdd objectAtIndex:0];
                 
-                NSString* cityName = [address valueForKey:@"City"] ;
+                if (!currentAddress) {
+                    currentAddress = UNKNOWN_STATUS;
+                }
+                
+                NSString* cityName = [address valueForKey:@"City"];
+                
+                if (!cityName) {
+                    cityName = UNKNOWN_STATUS;
+                }
                 
                 NSString* state = [address valueForKey:@"State"];
                 
+                if (!state) {
+                    state = UNKNOWN_STATUS;
+                }
+                
                 NSString* postal = [currentLocation postalCode];
+                
+                if (!postal) {
+                    postal = UNKNOWN_STATUS;
+                }
                 
                 CityDataObject* city = [[CityDataObject alloc] initWithCity:cityName State:state stateAbbr:state andPostal:postal andAddress:currentAddress andLongitude:[lon stringValue] andLatitude:[lat stringValue]];
                 

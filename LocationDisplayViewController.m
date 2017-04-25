@@ -14,7 +14,7 @@
 
 #define AD_ID @"ca-app-pub-2804657410672476/9141297944"
 
-@interface LocationDisplayViewController ()<GADBannerViewDelegate>
+@interface LocationDisplayViewController ()<GADBannerViewDelegate, LocationManagerDelegate>
 
 @end
 
@@ -30,7 +30,13 @@
     [self.lbl_longitude setText:self.longString];
     
     self.loadingView = [[UIView alloc] init];
+    [self.loadingView setFrame:self.view.frame];
     [self.loadingView setBackgroundColor:[UIColor blackColor]];
+    UIActivityIndicatorView* indicator = [[UIActivityIndicatorView alloc] init];
+    [indicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [indicator setFrame:CGRectMake((self.loadingView.frame.size.width / 2), (self.loadingView.frame.size.height / 2), indicator.frame.size.width, indicator.frame.size.height)];
+    [self.loadingView addSubview:indicator];
+    [indicator startAnimating];
     [self.loadingView setHidden:YES];
 }
 
@@ -71,22 +77,24 @@
 
 -(void)showLoadingView
 {
-    UIActivityIndicatorView* indicator = [[UIActivityIndicatorView alloc] init];
-    [indicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [indicator startAnimating];
-    
-    [self.loadingView setFrame:self.view.frame];
-    [indicator setFrame:CGRectMake((self.loadingView.frame.size.width / 2), (self.loadingView.frame.size.height / 2), indicator.frame.size.width, indicator.frame.size.height)];
     [self.loadingView setAlpha:0.5];
     [self.loadingView setHidden:NO];
-    [self.loadingView addSubview:indicator];
     [self.view addSubview:self.loadingView];
 
 }
 
 -(void)hideLoadingView
 {
+    [self.loadingView setHidden:YES];
+}
+
+-(void)resetLocation:(generalCompletionHandler)completionHandler
+{
+    AppDelegate* appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     
+    [appDelegate.locationManager setDelegate:self];
+    
+    [appDelegate.locationManager startUpdates];
 }
 
 
@@ -96,6 +104,35 @@
 }
 
 - (IBAction)resetPressed:(id)sender {
+    
     [self showLoadingView];
+    
+    AppDelegate* appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
+    [appDelegate.locationManager setDelegate:self];
+    
+    [appDelegate.locationManager startUpdates];
 }
+
+-(void)locationDidFinish
+{
+    AppDelegate* appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
+    CityDataObject* city = [appDelegate.locationManager retrieveCurrentLocation];
+    
+    self.addressString = [[NSString alloc] initWithString:city.address];
+    self.cityString = [[NSString alloc] initWithString:city.name];
+    self.stateString = [[NSString alloc] initWithString:city.state];
+    self.latString = [[NSString alloc] initWithString:city.latitude];
+    self.longString = [[NSString alloc] initWithString:city.longitude];
+    
+    [self.lbl_currentLocation setText:self.addressString];
+    [self.lbl_city setText:self.cityString];
+    [self.lbl_state setText:self.stateString];
+    [self.lbl_latitude setText:self.latString];
+    [self.lbl_longitude setText:self.longString];
+    
+    [self hideLoadingView];
+}
+
 @end

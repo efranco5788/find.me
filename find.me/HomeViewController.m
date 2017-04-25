@@ -34,6 +34,13 @@
     [appDelegate.locationManager startUpdates];
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+    AppDelegate* appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
+    [appDelegate.locationManager setDelegate:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

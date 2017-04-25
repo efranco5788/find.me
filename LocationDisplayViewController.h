@@ -11,8 +11,9 @@
 @class CityDataObject;
 @class GADBannerView;
 
-@interface LocationDisplayViewController : UIViewController
+typedef void (^generalCompletionHandler)(BOOL success);
 
+@interface LocationDisplayViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *lbl_currentLocation;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_city;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_state;
@@ -35,5 +36,6 @@
 -(void) showAdView:(GADBannerView*)adView;
 -(void) showLoadingView;
 -(void) hideLoadingView;
+-(void) resetLocation: (generalCompletionHandler)completionHandler;
 
 @end
