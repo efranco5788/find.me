@@ -29,6 +29,8 @@
 		89B7F88C1EA84D4D00CD3DF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7F88B1EA84D4D00CD3DF6 /* StoreKit.framework */; };
 		89B7F88E1EA84D5500CD3DF6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7F88D1EA84D5500CD3DF6 /* SystemConfiguration.framework */; };
 		89B7F88F1EA8501400CD3DF6 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7F8781EA84CEC00CD3DF6 /* EventKit.framework */; };
+		89F1B8711EB03FCA00A09DF9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F1B8701EB03FCA00A09DF9 /* MapViewController.m */; };
+		89F1B8731EB0420E00A09DF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F1B8721EB0420E00A09DF9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,9 @@
 		89B7F8891EA84D4700CD3DF6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		89B7F88B1EA84D4D00CD3DF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		89B7F88D1EA84D5500CD3DF6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		89F1B86F1EB03FCA00A09DF9 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		89F1B8701EB03FCA00A09DF9 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		89F1B8721EB0420E00A09DF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F1B8731EB0420E00A09DF9 /* MapKit.framework in Frameworks */,
 				89B7F88F1EA8501400CD3DF6 /* EventKit.framework in Frameworks */,
 				89B7F88E1EA84D5500CD3DF6 /* SystemConfiguration.framework in Frameworks */,
 				89B7F88C1EA84D4D00CD3DF6 /* StoreKit.framework in Frameworks */,
@@ -152,6 +158,8 @@
 				8902662B1EA44E44006F3A3F /* LocationDisplayViewController.m */,
 				8902662F1EA45568006F3A3F /* LocationManager.h */,
 				890266301EA45568006F3A3F /* LocationManager.m */,
+				89F1B86F1EB03FCA00A09DF9 /* MapViewController.h */,
+				89F1B8701EB03FCA00A09DF9 /* MapViewController.m */,
 				890266321EA46561006F3A3F /* CityDataObject.h */,
 				890266331EA46561006F3A3F /* CityDataObject.m */,
 				890266001EA44D32006F3A3F /* Main.storyboard */,
@@ -193,6 +201,7 @@
 		89B7F8771EA84CEB00CD3DF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89F1B8721EB0420E00A09DF9 /* MapKit.framework */,
 				89B7F88D1EA84D5500CD3DF6 /* SystemConfiguration.framework */,
 				89B7F88B1EA84D4D00CD3DF6 /* StoreKit.framework */,
 				89B7F8891EA84D4700CD3DF6 /* MessageUI.framework */,
@@ -349,6 +358,7 @@
 				8902662D1EA44E44006F3A3F /* LocationDisplayViewController.m in Sources */,
 				890265F91EA44D32006F3A3F /* main.m in Sources */,
 				890266371EA48526006F3A3F /* HomeViewController.m in Sources */,
+				89F1B8711EB03FCA00A09DF9 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

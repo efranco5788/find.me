@@ -11,8 +11,10 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "AppDelegate.h"
 #import "CityDataObject.h"
+#import "MapViewController.h"
 
 #define AD_ID @"ca-app-pub-2804657410672476/9141297944"
+#define SEGUE_MAP_VIEW @"segueToMap"
 
 @interface LocationDisplayViewController ()<GADBannerViewDelegate, LocationManagerDelegate>
 
@@ -112,6 +114,27 @@
     [appDelegate.locationManager setDelegate:self];
     
     [appDelegate.locationManager startUpdates];
+}
+
+- (IBAction)mapPressed:(id)sender {
+    [self performSegueWithIdentifier:SEGUE_MAP_VIEW sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:SEGUE_MAP_VIEW]) {
+        
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
+        
+        AppDelegate* appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+        
+        CityDataObject* city = [appDelegate.locationManager retrieveCurrentLocation];
+        
+        MapViewController* destination = segue.destinationViewController;
+        
+        [destination setUserLocation:city];
+        
+    }
 }
 
 -(void)locationDidFinish

@@ -10,6 +10,7 @@
 
 @class CityDataObject;
 @class GADBannerView;
+@class MapViewController;
 
 typedef void (^generalCompletionHandler)(BOOL success);
 
@@ -19,8 +20,10 @@ typedef void (^generalCompletionHandler)(BOOL success);
 @property (strong, nonatomic) IBOutlet UILabel *lbl_state;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_longitude;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_latitude;
+@property (strong, nonatomic) IBOutlet UIButton *btn_viewMap;
 @property (strong, nonatomic) IBOutlet UIButton *btn_reset;
 - (IBAction)resetPressed:(id)sender;
+- (IBAction)mapPressed:(id)sender;
 
 
 @property (strong, nonatomic) NSString* addressString;
