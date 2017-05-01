@@ -154,14 +154,22 @@ static LocationManager* sharedManager;
     
     switch (status) {
         case kCLAuthorizationStatusNotDetermined:
+            
             break;
         case kCLAuthorizationStatusAuthorizedWhenInUse:
             [self.locationManager startUpdatingLocation];
             NSLog(@"Location Services has started");
+            
             break;
         default:
-            [self.delegate onlineAttemptFailed];
+        {
+            NSDictionary* userInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Access Denied", nil),
+                                           NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"finding.me has been denied access to Location Services.", nil),
+                                           NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Please give finding.me  Settings -> Privacy -> Location Services access", nil)};
+            NSError* error = [NSError errorWithDomain:NSCocoaErrorDomain code:-50 userInfo:userInfo];
+            [self.delegate onlineAttemptFailedwithError:error];
             break;
+        }
     }
 }
 
@@ -217,7 +225,7 @@ static LocationManager* sharedManager;
             else
             {
                 [self stopUpdates];
-                [self.delegate onlineAttemptFailed];
+                [self.delegate onlineAttemptFailedwithError:nil];
             }
             break;
         case kCLErrorGeocodeCanceled:
@@ -234,7 +242,7 @@ static LocationManager* sharedManager;
             }
             else
                 [self stopUpdates];
-            [self.delegate onlineAttemptFailed];
+            [self.delegate onlineAttemptFailedwithError:nil];
             break;
     }
 }
@@ -278,7 +286,7 @@ static LocationManager* sharedManager;
             
             if (error) {
                 NSLog(@"%@", error.description);
-                [self.delegate onlineAttemptFailed];
+                [self.delegate onlineAttemptFailedwithError:nil];
             }
             else
             {

@@ -29,6 +29,8 @@
 		89B7F88C1EA84D4D00CD3DF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7F88B1EA84D4D00CD3DF6 /* StoreKit.framework */; };
 		89B7F88E1EA84D5500CD3DF6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7F88D1EA84D5500CD3DF6 /* SystemConfiguration.framework */; };
 		89B7F88F1EA8501400CD3DF6 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7F8781EA84CEC00CD3DF6 /* EventKit.framework */; };
+		89CA7CD11EB5B9AA006C7F4B /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA7CD01EB5B9AA006C7F4B /* FirebaseCore.framework */; };
+		89CA7CD31EB5C000006C7F4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89CA7CD21EB5C000006C7F4B /* GoogleService-Info.plist */; };
 		89F1B8711EB03FCA00A09DF9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F1B8701EB03FCA00A09DF9 /* MapViewController.m */; };
 		89F1B8731EB0420E00A09DF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F1B8721EB0420E00A09DF9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -73,7 +75,7 @@
 		890266331EA46561006F3A3F /* CityDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDataObject.m; sourceTree = "<group>"; };
 		890266351EA48526006F3A3F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		890266361EA48526006F3A3F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		89B7F8751EA84C6100CD3DF6 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		89B7F8751EA84C6100CD3DF6 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = find.me/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		89B7F8781EA84CEC00CD3DF6 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		89B7F87D1EA84CFA00CD3DF6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		89B7F87F1EA84D0400CD3DF6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -84,6 +86,9 @@
 		89B7F8891EA84D4700CD3DF6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		89B7F88B1EA84D4D00CD3DF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		89B7F88D1EA84D5500CD3DF6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		89CA7CD01EB5B9AA006C7F4B /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		89CA7CD21EB5C000006C7F4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89CA7CD41EB5C208006C7F4B /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
 		89F1B86F1EB03FCA00A09DF9 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		89F1B8701EB03FCA00A09DF9 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		89F1B8721EB0420E00A09DF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -95,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F1B8731EB0420E00A09DF9 /* MapKit.framework in Frameworks */,
+				89CA7CD11EB5B9AA006C7F4B /* FirebaseCore.framework in Frameworks */,
 				89B7F88F1EA8501400CD3DF6 /* EventKit.framework in Frameworks */,
 				89B7F88E1EA84D5500CD3DF6 /* SystemConfiguration.framework in Frameworks */,
 				89B7F88C1EA84D4D00CD3DF6 /* StoreKit.framework in Frameworks */,
@@ -165,6 +171,7 @@
 				890266001EA44D32006F3A3F /* Main.storyboard */,
 				890266031EA44D32006F3A3F /* Assets.xcassets */,
 				890266051EA44D32006F3A3F /* LaunchScreen.storyboard */,
+				89CA7CD21EB5C000006C7F4B /* GoogleService-Info.plist */,
 				890266081EA44D32006F3A3F /* Info.plist */,
 				890265F71EA44D32006F3A3F /* Supporting Files */,
 			);
@@ -175,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				890265F81EA44D32006F3A3F /* main.m */,
-				89B7F8751EA84C6100CD3DF6 /* GoogleMobileAds.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -201,6 +207,9 @@
 		89B7F8771EA84CEB00CD3DF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89CA7CD41EB5C208006C7F4B /* Firebase.h */,
+				89B7F8751EA84C6100CD3DF6 /* GoogleMobileAds.framework */,
+				89CA7CD01EB5B9AA006C7F4B /* FirebaseCore.framework */,
 				89F1B8721EB0420E00A09DF9 /* MapKit.framework */,
 				89B7F88D1EA84D5500CD3DF6 /* SystemConfiguration.framework */,
 				89B7F88B1EA84D4D00CD3DF6 /* StoreKit.framework */,
@@ -326,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				890266071EA44D32006F3A3F /* LaunchScreen.storyboard in Resources */,
+				89CA7CD31EB5C000006C7F4B /* GoogleService-Info.plist in Resources */,
 				890266041EA44D32006F3A3F /* Assets.xcassets in Resources */,
 				890266021EA44D32006F3A3F /* Main.storyboard in Resources */,
 			);
@@ -513,9 +523,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/find.me",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = find.me/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.budglit.find-me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -532,9 +547,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/find.me",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = find.me/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.budglit.find-me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

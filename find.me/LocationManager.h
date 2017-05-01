@@ -20,8 +20,7 @@ typedef void (^fetchPostalCompletionHandler)(id object);
 @protocol LocationManagerDelegate <NSObject>
 @optional
 -(void) locationDidFinish;
--(void) onlineAttemptFailed;
--(void) offlineAttemptFailed;
+-(void) onlineAttemptFailedwithError:(NSError*)error;
 -(void) coordinateFetched:(id)deal;
 @end
 

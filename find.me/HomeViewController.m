@@ -51,6 +51,18 @@
     [self performSegueWithIdentifier:PUSH_TO_LOCATION_VIEW sender:self];
 }
 
+-(void)onlineAttemptFailedwithError:(NSError *)error
+{
+    UIAlertController* alert;
+    
+    if (error) {
+        alert = [UIAlertController alertControllerWithTitle:error.localizedDescription message:error.localizedRecoverySuggestion preferredStyle:UIAlertControllerStyleAlert];
+    }
+    else alert = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
