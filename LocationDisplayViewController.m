@@ -158,4 +158,22 @@
     [self hideLoadingView];
 }
 
+-(void)onlineAttemptFailedwithError:(NSError *)error
+{
+    UIAlertController* alert;
+    
+    if (error) {
+        alert = [UIAlertController alertControllerWithTitle:error.localizedDescription message:error.localizedRecoverySuggestion preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* cancelBtn = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            if (!self.loadingView.isHidden) [self hideLoadingView];
+        }];
+        
+        [alert addAction:cancelBtn];
+    }
+    else alert = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end

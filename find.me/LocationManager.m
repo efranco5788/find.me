@@ -125,8 +125,14 @@ static LocationManager* sharedManager;
     
     [self.locationManager setDelegate:self];
     
-    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [self.locationManager requestWhenInUseAuthorization];
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        //[self.locationManager requestWhenInUseAuthorization];
+    }
+    else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        [self locationManager:self.locationManager didChangeAuthorizationStatus:kCLAuthorizationStatusDenied];
+    }
+    else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted) {
+        [self locationManager:self.locationManager didChangeAuthorizationStatus:kCLAuthorizationStatusRestricted];
     }
     else{
         [self.locationManager startUpdatingLocation];
