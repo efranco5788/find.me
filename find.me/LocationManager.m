@@ -126,7 +126,7 @@ static LocationManager* sharedManager;
     [self.locationManager setDelegate:self];
     
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
-        //[self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestWhenInUseAuthorization];
     }
     else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
         [self locationManager:self.locationManager didChangeAuthorizationStatus:kCLAuthorizationStatusDenied];
@@ -158,9 +158,9 @@ static LocationManager* sharedManager;
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     
+    
     switch (status) {
         case kCLAuthorizationStatusNotDetermined:
-            
             break;
         case kCLAuthorizationStatusAuthorizedWhenInUse:
             [self.locationManager startUpdatingLocation];
